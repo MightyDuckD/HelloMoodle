@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>M8</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="bootstrap-switch/css/bootstrap3/bootstrap-switch.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script src="bootstrap-switch/js/bootstrap-switch.min.js"></script> -->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <style>
+	ul.nav li a, ul.nav li a:visited {
+		color: #fff !important;
+	}
+
+	ul.nav li a:hover, ul.nav li a:active {
+		color: #fff !important;
+	}
+
+	ul.nav li.active a {
+		color: #fff !important;
+	}
+	
+	.clickable {
+		cursor:hand;
+		cursor:pointer;
+	}
+	
+	.well table {
+		 margin-bottom: 0px;
+	 }
+	 .options {
+		margin-top: 40px; 
+		text-align: right;
+	 }
+  </style>
+  <script>
+  $( document ).ready(function() {
+   $('#autoclosing').bootstrapToggle({
+      on: 'Autoclose ON',
+      off: 'Autoclose OFF',
+	  width: 120
+    });
+  
+  
+	$("#expand").on("click",function() {
+	  $("#autoclosing").bootstrapToggle('off')
+	});
+	$("#autoclosing").change(function() {
+		  if($("#autoclosing").prop('checked')) {
+			 $("#collapse").click();
+		  }
+    })
+	$("#maingroup a").on("click",function(){
+		if($("#autoclosing").prop('checked')) {
+			$("#collapse").click();
+		}
+	});
+  });
+  </script>
+</head>
+<body>
+	<div class="container">
+	  <div class="row">
+		  <div class="col-sm-6">
+			<h1>Hallo Moodle!</h1>
+		  </div>
+		  <div  class="col-sm-6 options">
+			  <input 	data-label-text="Autoclose" data-size="mini" type="checkbox" id="autoclosing">
+			  <input type="button" id="expand" class="btn btn-info btn-xs" data-toggle="collapse" data-target="#maingroup div.panel-collapse:not(.in)" value="Expand-All"></input>
+			  <input type="button" id="collapse" class="btn btn-info btn-xs" data-toggle="collapse" data-target="#maingroup div.panel-collapse.in" value="Collapse-All"></input>
+		  </div>
+	  </div>
+	  <div class="row">
+	  <INSERT-HERE>
+	  </div>
+		<div class="row">
+			<div class="text-muted col-sm-10">by Simon Lehner-D. &lt;simon.lehnerd@gmail.com&gt;</div>
+		
+			<div class="col-sm-2 pull-right">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "kurse": [
+    {
+      "lehrer": "Kronawetter",
+      "kurs": "SYP 5 Theorie",
+	  "link": "http://moodle.htlstp.ac.at/moodle/course/view.php?id=650",
+      "dateien": [
+        {
+          "name": "01 Einführung",
+          "link": "http://moodle.htlstp.ac.at/moodle/mod/resource/view.php?id\u003d13816"
+        },
+		{
+          "name": "02 Projektmanager Affen",
+          "link": "http://moodle.htlstp.ac.at/moodle/mod/resource/view.php?id=13817"
+        },
+		{
+          "name": "03 Ansätze",
+          "link": "http://moodle.htlstp.ac.at/moodle/mod/resource/view.php?id=13818"
+        }
+		
+      ]
+    },
+    {
+      "lehrer": "Kronawetter",
+      "kurs": "DBI 5 Praxis",
+	  "link": "http://moodle.htlstp.ac.at/moodle/course/view.php?id=661",
+      "dateien": [
+      ]
+    }
+  ]
+}
